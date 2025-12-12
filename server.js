@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const ffmpeg = require('fluent-ffmpeg');
 
+ffmpeg.setFfmpegPath('/usr/bin/ffmpeg');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -44,4 +46,5 @@ app.listen(PORT, () => {
       console.log('FFmpeg está instalado e pronto para uso.');
     }
   });
+
 });
